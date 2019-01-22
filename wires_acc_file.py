@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 import datetime
 
-# Version 0.2
+# Python module to proces WiresAccess.log file.
+# Usage: create istance of wires_acc_file, pass path to file as parameter.
+#        Access "calls" member (list) for individual log entries.
+#        See "wires_log_entry" for accessible members.
 
 class wires_log_entry:
     def __init__(self, tokens):
