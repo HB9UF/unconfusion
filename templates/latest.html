@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+th, td {
+    padding: 0px 15px;
+}
+td {
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+        </style>
+    </head>
+   <body>
+       <table>
+           <tr>
+               <th>Time</th>
+               <th>Call</th>
+               <th>ID</th>
+               <th>Description</th>
+               <th>Origin</th>
+               <th>Position</th>
+           </tr>
+           {% for call in calls %}
+           <tr>
+               <td>{{call.timestamp}}</td>
+               <td>{{call.call}}</td>
+               <td>{{call.id}}</td>
+               <td>{{call.description}}</td>
+               <td>{{call.activity}}</td>
+               <td>
+                   <a href="https://www.google.com/maps/place/{{call.position_pretty}}">
+                       {{call.position_pretty}}
+                   </a>
+               </td>
+           </tr>
+           {% endfor %}
+       </table>
+   </body>
+</html>

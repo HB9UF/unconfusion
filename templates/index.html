@@ -1,0 +1,33 @@
+<pre id="output"></pre>
+<!--
+<script>
+    var output = document.getElementById('output');
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '{{ url_for('stream') }}');
+    xhr.onload = function() {output.textContent = xhr.responseText;}
+
+    setInterval(function() {
+    xhr.send();
+    }, 1000);
+</script>
+-->
+
+<script type="text/javascript">
+function update(){
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    var output = document.getElementById('output');
+    output.textContent=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET",'stream',true);
+xmlhttp.send();
+}
+update();
+setInterval(update, 5000);
+</script>
