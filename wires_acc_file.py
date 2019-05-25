@@ -52,8 +52,8 @@ class wires_log_entry:
         return d.timestamp()
 
     def dump(self):
-        print('%s\n  ID: %s\n  Description: %s\n  Timestamp: %s\n  Activity: %s\n  Location: %s\n\n' %
-                (self.call, self.id, self.description, self.timestamp, self.activity, self.location ))
+        print('%s\n  ID: %s (%s)\n  Description: %s\n  Timestamp: %s\n  Activity: %s\n  Location: %s\n\n' %
+                (self.call, self.id, self.radio, self.description, self.timestamp, self.activity, self.location ))
 
 class wires_acc_file:
     def __init__(self, path):
