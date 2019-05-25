@@ -16,7 +16,6 @@ class wires_log_entry:
         self.activity = tokens[4]
         self.location = tokens[6]
         self.position_pretty = ''
-        self.radio = 'unknown'
         if self.location:
             location_tokens = self.location.split(' / ')
             if location_tokens[0].startswith('Lat:'):
@@ -26,6 +25,13 @@ class wires_log_entry:
             location_tokens[0] = location_tokens[0][2:]+location_tokens[0][0]
             location_tokens[1] = location_tokens[1][2:]+location_tokens[1][0]
             self.position_pretty = location_tokens[0] + ' ' + location_tokens[1]
+
+        self.radio = self.infer_radiotype()
+
+    def infer_radiotype(self):
+        return 'unknown'
+
+
 
 
     def get_timestamp_epoch(self):
