@@ -3,6 +3,7 @@
 from time import sleep
 from flask import Flask, render_template
 from wires_acc_file import wires_acc_file
+import sys
 
 app = Flask(__name__)
 
@@ -19,7 +20,7 @@ def stream():
 
 @app.route('/latest')
 def latest():
-    acc_file = wires_acc_file('C:\\Users\\hb9uf.UF-Pilatus\\Documents\\WIRESXA\\AccHistory\\WiresAccess.log')
+    acc_file = wires_acc_file(sys.argv[1])
     calls = sorted(acc_file.calls, key=lambda i: i.get_timestamp_epoch(),reverse=True)
     return render_template('latest.html', calls = calls)
 
