@@ -40,9 +40,9 @@ class wires_log_entry:
         self.radio = self.infer_radiotype()
 
     def infer_radiotype(self):
+        for (prefix, radio_type) in RADIO_TYPE_MAP.items():
+            if self.id.startswith(prefix): return radio_type
         return 'unknown'
-
-
 
 
     def get_timestamp_epoch(self):
