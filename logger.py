@@ -20,7 +20,7 @@ while True:
                 if entry.get_timestamp_epoch() > acc_file.newest_entry_timestamp:
                     entry.dump()
                     print(entry.tokens)
-                    logging.info('%s, %s, %s, %s, %s, %s' % (entry.call, entry.id, entry.description, entry.timestamp, entry.activity, entry.location))
+                    logging.info('%s, %s (%s), %s, %s, %s, %s' % (entry.call, entry.id, entry.radio, entry.description, entry.timestamp, entry.activity, entry.location))
             
             last_mtime = os.path.getmtime(sys.argv[1])
             acc_file = new_acc_file
