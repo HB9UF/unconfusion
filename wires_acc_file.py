@@ -6,6 +6,17 @@ import datetime
 #        Access "calls" member (list) for individual log entries.
 #        See "wires_log_entry" for accessible members.
 
+# List compiled by Peter HB9DWW, maps radio id prefix to radio type
+RADIO_TYPE_MAP = {
+        'E0' : 'FT-1D',
+        'E5' : 'FT-2D',
+        'F0' : 'FTM-400D',
+        'F5' : 'FTM-100D',
+        'G0' : 'FT-991',
+        'H5' : 'FT-70D',
+        'R'  : 'repeater',
+        }
+
 class wires_log_entry:
     def __init__(self, tokens):
         self.tokens = tokens
