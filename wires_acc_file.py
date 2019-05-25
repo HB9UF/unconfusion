@@ -13,7 +13,10 @@ RADIO_TYPE_MAP = {
         'F0' : 'FTM-400D',
         'F5' : 'FTM-100D',
         'G0' : 'FT-991',
+        'H0' : 'FTM-3200D',
         'H5' : 'FT-70D',
+        'HA' : 'FTM-3207D',
+        'HF' : 'FTM-7250D',
         'R'  : 'repeater',
         }
 
