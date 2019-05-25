@@ -16,6 +16,7 @@ class wires_log_entry:
         self.activity = tokens[4]
         self.location = tokens[6]
         self.position_pretty = ''
+        self.radio = 'unknown'
         if self.location:
             location_tokens = self.location.split(' / ')
             if location_tokens[0].startswith('Lat:'):
