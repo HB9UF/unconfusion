@@ -42,6 +42,17 @@ class wires_log_entry:
     def infer_radiotype(self):
         for (prefix, radio_type) in RADIO_TYPE_MAP.items():
             if self.id.startswith(prefix): return radio_type
+
+        if self.id.isdigit():
+            number = int(self.id)
+            if number >= 10000 and number < 20000 or \
+               number >= 30000 and number < 40000 or \
+               number >= 50000 and number < 60000:
+                return 'node'
+            if number >= 20000 and number < 30000 or \
+               number >= 40000 and number < 50000 or \
+               number >= 60000 and number < 70000:
+                return 'room'
         return 'unknown'
 
 
