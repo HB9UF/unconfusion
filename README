@@ -1,0 +1,16 @@
+Installation
+------------
+
+This piece of software runs on windows and requires Python 3.7 as well as the
+Flask framework. Steps to install:
+
+1. Install Python 3.7
+2. Install Flask by running "pip install Flask"
+3. Run the autostart batch file for testing.
+
+Two python instances should start, on writing the "wires_acc.log" file, and the
+other one binding 0.0.0.0:5000 to present the web pages "/" and "/latest" via
+HTTP on that port. / produces the last 50 log file entries and /latest gives a
+summary of all stations ever seen, sorted by when they were seen last.
+
+4. If you want to run the two programs on startup, install in autostart.
