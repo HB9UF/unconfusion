@@ -10,6 +10,7 @@ import datetime
 RADIO_TYPE_MAP = {
         'E0' : 'FT-1D',
         'E5' : 'FT-2D',
+        'EA' : 'FT-3D',
         'F0' : 'FTM-400D',
         'F5' : 'FTM-100D',
         'G0' : 'FT-991',
