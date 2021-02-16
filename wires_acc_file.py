@@ -50,13 +50,16 @@ class wires_log_entry:
 
         if self.id.isdigit():
             number = int(self.id)
-            if number >= 10000 and number < 20000 or \
-               number >= 30000 and number < 40000 or \
-               number >= 50000 and number < 60000:
+            if number >= 10000 and number <  20000 or \
+               number >= 30000 and number <  40000 or \
+               number >= 50000 and number <  60000 or \
+               number >= 70000 and number <  80000 or \
+               number >= 90000 and number < 100000:
                 return 'node'
             if number >= 20000 and number < 30000 or \
                number >= 40000 and number < 50000 or \
-               number >= 60000 and number < 70000:
+               number >= 60000 and number < 70000 or \
+               number >= 80000 and number < 90000:
                 return 'room'
         return 'unknown'
 
