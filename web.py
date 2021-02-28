@@ -16,7 +16,7 @@ def stream():
     with open('wires_acc.log') as f:
         lines = f.readlines()
         lines.reverse()
-    return app.response_class(lines[0:50], mimetype='text/plain')
+    return app.response_class(lines[0:500], mimetype='text/plain')
 
 @app.route('/latest')
 def latest():
