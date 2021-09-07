@@ -11,6 +11,7 @@ RADIO_TYPE_MAP = {
         'E0' : 'FT-1D',
         'E5' : 'FT-2D',
         'EA' : 'FT-3D',
+        'EB' : 'FT-5D',
         'F0' : 'FTM-400D',
         'F5' : 'FTM-100D',
         'FA' : 'FTM-300D',
