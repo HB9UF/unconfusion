@@ -26,4 +26,6 @@ while True:
             acc_file = new_acc_file
     except FileNotFoundError:
         print('Error: File not found')
+    except PermissionError as e:
+        print(e)
     time.sleep(1)
