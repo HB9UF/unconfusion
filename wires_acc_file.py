@@ -6,7 +6,7 @@ import datetime
 #        Access "calls" member (list) for individual log entries.
 #        See "wires_log_entry" for accessible members.
 
-# List compiled by Peter HB9DWW, maps radio id prefix to radio type
+# List compiled by Peter HB9DWW, maps radio id prefix to radio type 2024-07-07
 RADIO_TYPE_MAP = {
         'E0' : 'FT-1D',
         'E5' : 'FT-2D',
@@ -15,12 +15,15 @@ RADIO_TYPE_MAP = {
         'F0' : 'FTM-400D',
         'F5' : 'FTM-100D',
         'FA' : 'FTM-300D',
+        'FB' : 'FTM-200D',
+        'FC' : 'FTM-500D',
         'G0' : 'FT-991',
         'H0' : 'FTM-3200D',
         'H5' : 'FT-70D',
         'HA' : 'FTM-3207D',
         'HF' : 'FTM-7250D',
-        'R'  : 'repeater',
+        'R0'  : 'DR-1/DR-1X',
+        'R5'  : 'DR-2X',
         }
 
 class wires_log_entry:
